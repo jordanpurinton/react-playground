@@ -14,20 +14,24 @@ class App extends Component {
             videos: [],
             selectedVideo: null
         };
+        this.videoSearch('meme');
+    }
 
-        YTSearch({key: API_KEY, searchText: 'meme'},
+    videoSearch(searchTerm) {
+        YTSearch({key: API_KEY, term: searchTerm},
             (videos) => {
                 this.setState({
-                    videos: videos,  // es6 translation => this.setState({videos: videos})
+                    videos: videos,
                     selectedVideo: videos[0]
-                });
-            });
+                })
+            })
     }
+
 
     render() {
         return (
             <div>
-                <SearchBar/>
+                <SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)}/>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
