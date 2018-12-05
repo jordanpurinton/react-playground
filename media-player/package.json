@@ -26,13 +26,13 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "babel-preset-stage-1": "^6.1.18",
+    "babel-preset-stage-1": "^6.24.1",
     "lodash": "^4.17.5",
-    "react": "^0.14.3",
+    "react": "^0.14.9",
     "react-dom": "^16.0.1",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
-    "redux": "^3.0.4",
+    "redux": "^3.7.2",
     "youtube-api-search": "0.0.5"
   }
 }
